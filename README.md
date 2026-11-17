@@ -15,14 +15,14 @@ GPS delivery point, releases it and returns home. Safety checks run the whole ti
 
 ```mermaid
 flowchart LR
-    A[Pre-flight checks] --> B[GUIDED, arm,<br/>take off]
-    B --> C[AUTO: fly search route<br/>camera watches for marker]
-    C -->|marker confirmed| D[Center over marker<br/>using camera + GPS]
-    D --> E[LAND on marker<br/>servo: load payload]
-    E --> F[Take off again<br/>fly to delivery target]
-    F --> G[Servo: release payload]
-    G --> H[RTL: return home]
-    C -->|route ends, no marker| H
+    A["Pre-flight checks"] --> B["GUIDED, arm, take off"]
+    B --> C["AUTO search route, camera watches for marker"]
+    C -- "marker confirmed" --> D["Center over marker using camera and GPS"]
+    D --> E["LAND on marker, servo loads payload"]
+    E --> F["Take off again, fly to delivery target"]
+    F --> G["Servo releases payload"]
+    G --> H["RTL, return home"]
+    C -- "route ends, no marker" --> H
 ```
 
 1. **Pre-flight**:

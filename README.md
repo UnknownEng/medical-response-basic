@@ -7,7 +7,7 @@ GPS delivery point, releases it and returns home. Safety checks run the whole ti
 
 ![Mission replay (highlights, 7x speed)](docs/media/demo.gif)
 
-▶ **[Full mission replay video (4 min, 1080p)](docs/media/mission_replay.mp4)**: chase cam, drone camera with live ArUco detection, flight data, the mission script's terminal output and a top-down map, all synced.
+▶ **[Full mission replay video (4 min, 720p)](docs/media/mission_replay.mp4)**: chase cam, drone camera with live ArUco detection, flight data, the mission script's terminal output and a top-down map, all synced.
 
 ---
 

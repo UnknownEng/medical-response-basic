@@ -1,0 +1,10 @@
+# Extra SITL parameters for the delivery simulation (loaded after copter.parm)
+# Payload servo on output 9, not tied to any autopilot function
+SERVO9_FUNCTION 0
+# 5 m/s search speed so the camera has time to see the marker and the drone
+# stops close to it. ArduPilot master renamed WPNAV_SPEED (cm/s) to WP_SPD (m/s);
+# both are set, and the one this firmware doesn't know is ignored.
+WPNAV_SPEED 500
+WP_SPD 5
+# Bigger simulated battery so two flights fit in one charge
+BATT_CAPACITY 10000

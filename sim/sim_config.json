@@ -1,0 +1,74 @@
+{
+  "sim": {
+    "home": [33.6844, 73.0479, 540, 0],
+    "layout_m": {
+      "wp1": [60, 0], "wp2": [60, 80], "wp3": [140, 80],
+      "decoy_id3": [60, 40], "marker_id7": [100, 80], "target": [150, -30]
+    }
+  },
+  "connection": {
+    "pymavlink_url": "tcp:127.0.0.1:5760",
+    "baud": 115200,
+    "mavros_ns": "/mavros"
+  },
+  "mission": {
+    "waypoint_file": "route.waypoints",
+    "takeoff_alt_m": 15,
+    "search_timeout_s": 400,
+    "land_timeout_s": 120,
+    "rtl_timeout_s": 300,
+    "overall_timeout_s": 1200
+  },
+  "target": {
+    "lat": 33.6857475,
+    "lon": 73.0475761,
+    "alt_m": 10,
+    "drop_alt_m": 10,
+    "arrival_radius_m": 1.5,
+    "goto_timeout_s": 120,
+    "max_distance_from_home_m": 500
+  },
+  "payload": {
+    "servo_channel": 9,
+    "pwm_at_marker": 1900,
+    "pwm_at_target": 1100,
+    "release_wait_s": 3
+  },
+  "ground": {
+    "wait_s": 10,
+    "confirm_with_enter": false
+  },
+  "aruco": {
+    "source": "sim",
+    "frame_size": [640, 480],
+    "hfov_deg": 62.2,
+    "dictionary": "DICT_4X4_50",
+    "allowed_ids": [7],
+    "min_area_fraction": 0.002,
+    "consecutive_frames": 3,
+    "min_detect_alt_m": 3,
+    "center_before_landing": true,
+    "center_alt_m": 8,
+    "debug_dir": "output/detections",
+    "sim_world": {
+      "markers": [
+        {"id": 7, "lat": 33.6852983, "lon": 73.0487637, "size_m": 1.5},
+        {"id": 3, "lat": 33.6849390, "lon": 73.0483318, "size_m": 1.5}
+      ],
+      "ground_seed": 1,
+      "fps": 30,
+      "noise": 6,
+      "save_dir": "output/frames",
+      "save_every_s": 3
+    }
+  },
+  "safety": {
+    "min_sats": 6,
+    "min_battery_pct_to_launch": 60,
+    "min_battery_pct": 30,
+    "min_battery_v_to_launch": 0,
+    "min_battery_v": 0,
+    "link_timeout_s": 5,
+    "max_arm_attempts": 40
+  }
+}
